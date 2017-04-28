@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 
 public class CreateVideoPlayer : MonoBehaviour {
@@ -21,7 +22,6 @@ public class CreateVideoPlayer : MonoBehaviour {
 
 	void Start()
     {
-        Application.runInBackground = true;
         StartCoroutine(WaitUntilVideoPrepare());
     }
 
@@ -36,6 +36,8 @@ public class CreateVideoPlayer : MonoBehaviour {
         //Disable Play on Awake for both Video and Audio
         m_VideoPlayer.playOnAwake = false;
         m_AudioSource.playOnAwake = false;
+
+        m_VideoPlayer.frame = 250;
 
         //We want to play from video clip or url
         m_VideoPlayer.source = m_Source;
@@ -76,5 +78,7 @@ public class CreateVideoPlayer : MonoBehaviour {
         {
             yield return null;
         }
+
+        SceneManager.LoadScene("RootScene");
     }
 }

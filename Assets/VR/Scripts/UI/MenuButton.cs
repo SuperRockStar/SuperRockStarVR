@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,7 +22,7 @@ public class MenuButton : CameraEyeRaycastTarget {
         {
             material = GetComponent<MeshRenderer>().material;
 
-            currentIndex = Random.Range(0, m_ImageStack.Count - 1);
+            currentIndex = UnityEngine.Random.Range(0, m_ImageStack.Count - 1);
 
             InvokeRepeating("UpdateImage", 0, updateImageTime);
         }
@@ -51,7 +52,7 @@ public class MenuButton : CameraEyeRaycastTarget {
     protected override void OnActivated()
     {
         base.OnActivated();
-
+        
         SceneManager.LoadScene(LoadSceneName);
     }
 }
