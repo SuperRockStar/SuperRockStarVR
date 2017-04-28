@@ -7,7 +7,13 @@ using UnityEngine.Video;
 public class CreateVideoPlayer : MonoBehaviour {
 
     [SerializeField]
+    protected VideoSource m_Source;
+
+    [SerializeField]
     protected VideoClip m_Video;
+
+    [SerializeField]
+    protected string m_VideoUrl;
 
     protected VideoPlayer m_VideoPlayer;
 
@@ -31,10 +37,18 @@ public class CreateVideoPlayer : MonoBehaviour {
         m_VideoPlayer.playOnAwake = false;
         m_AudioSource.playOnAwake = false;
 
-        //We want to play from video clip not from url
-        m_VideoPlayer.source = VideoSource.VideoClip;
+        //We want to play from video clip or url
+        m_VideoPlayer.source = m_Source;
         
-        m_VideoPlayer.clip =m_Video;
+        switch(m_Source)
+        {
+            case VideoSource.Url:
+                m_VideoPlayer.url = m_VideoUrl;
+                break;
+            case VideoSource.VideoClip:
+                m_VideoPlayer.clip = m_Video;
+                break;
+        }
         
         //Set Audio Output to AudioSource
         m_VideoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;

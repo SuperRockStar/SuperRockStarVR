@@ -120,7 +120,6 @@ GameObject:
   - component: {fileID: 323771641}
   - component: {fileID: 323771640}
   - component: {fileID: 323771639}
-  - component: {fileID: 323771638}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -128,19 +127,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &323771638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 323771637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb25e958bb7b004ab847a9fe23dc6a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minAngle: 50
-  maxAngle: 310
 --- !u!81 &323771639
 AudioListener:
   m_ObjectHideFlags: 0
@@ -433,7 +419,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b284c488f55d34ea3128d885a64826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Source: 1
   m_Video: {fileID: 32900000, guid: 1ff530372dcdde945813ab5e75b4fe34, type: 3}
+  m_VideoUrl: file://C:/Users/Rumster/Desktop/Videos/KYGO - STOLE THE SHOW _ STAY
+    - 360 Angle VR - The 2015 Nobel Peace Prize Concert.mp4
 --- !u!23 &2102835702
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -481,7 +470,7 @@ Transform:
   m_GameObject: {fileID: 2102835700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6.710396, y: 6.7104015, z: 6.7104015}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
