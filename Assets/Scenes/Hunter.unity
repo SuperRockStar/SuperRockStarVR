@@ -1851,8 +1851,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d8d09b9e5d2437aa022780a2ce8c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointer: {fileID: 0}
-  cam: {fileID: 0}
 --- !u!114 &1300908811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2476,9 +2474,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statusText: {fileID: 387570010}
+  useCurrentIP: 1
   bufferSize: 6
   videoType: 2
-  videoURL: http://192.168.10.210:8080/vods/hunter.m3u8
+  videoURL: hunter.m3u8
   videoContentID: 
   videoProviderId: 
   initialResolution: 4096

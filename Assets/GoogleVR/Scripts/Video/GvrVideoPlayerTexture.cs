@@ -80,6 +80,8 @@ public class GvrVideoPlayerTexture : MonoBehaviour {
   // Attach a text component to get some debug status info.
   public Text statusText;
 
+    public bool useCurrentIP = true;
+
   /// <summary>
   /// Video type.
   /// </summary>
@@ -87,9 +89,9 @@ public class GvrVideoPlayerTexture : MonoBehaviour {
     Dash = 0,
     HLS = 2,
     Other = 3
-  };
+    };
 
-  public enum VideoResolution {
+    public enum VideoResolution {
     Lowest = 1,
     _720 = 720,
     _1080 = 1080,
@@ -478,6 +480,9 @@ public class GvrVideoPlayerTexture : MonoBehaviour {
       Debug.LogError("Cannot initialize with null videoURL");
       return false;
     }
+
+        if (useCurrentIP)
+            videoURL = PersistenIP.s_Instance.CurrentIP + videoURL;
 
     videoURL = videoURL == null ? "" : videoURL.Trim();
     videoContentID = videoContentID == null ? "" : videoContentID.Trim();
