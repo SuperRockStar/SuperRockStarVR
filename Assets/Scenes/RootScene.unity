@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LoadTime: 2
-  LoadSceneName: VRTest
+  LoadSceneName: Snake
   updateImageTime: 0.4
   m_ImageStack:
   - {fileID: 2800000, guid: 4e28096170ea4a14595269cf160461e9, type: 3}
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LoadTime: 2
-  LoadSceneName: VRTest
+  LoadSceneName: Miley
   updateImageTime: 0.35
   m_ImageStack:
   - {fileID: 2800000, guid: 267ea83e271c2a843a8a24696332129d, type: 3}
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LoadTime: 2
-  LoadSceneName: VRTest
+  LoadSceneName: Robbie
   updateImageTime: 0.5
   m_ImageStack:
   - {fileID: 2800000, guid: 4f9ec7baacb99ee468c41649da5cc532, type: 3}
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LoadTime: 2
-  LoadSceneName: VRTest
+  LoadSceneName: Hunter
   updateImageTime: 0.3
   m_ImageStack:
   - {fileID: 2800000, guid: ecb61d72a0347924bbaa14f385bd6d4f, type: 3}
