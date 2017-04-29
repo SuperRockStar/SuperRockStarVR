@@ -23,6 +23,8 @@ public class CameraEyeRaycastTarget : MonoBehaviour {
     {
         get
         {
+            if (m_CurrentTime < 0)
+                return 0;
             return m_CurrentTime / m_LoadTime;
         }
     }
@@ -30,7 +32,7 @@ public class CameraEyeRaycastTarget : MonoBehaviour {
     protected virtual void Awake()
     {
         currentPhase = TargetPhase.Out;
-        m_CurrentTime = 0;
+        m_CurrentTime = -2;
     }
 
     protected virtual void Update()
@@ -38,7 +40,7 @@ public class CameraEyeRaycastTarget : MonoBehaviour {
         switch(currentPhase)
         {
             case TargetPhase.Out:
-                m_CurrentTime = 0;
+                m_CurrentTime = -2;
                 break;
             case TargetPhase.Over:
                 m_CurrentTime += Time.deltaTime;
