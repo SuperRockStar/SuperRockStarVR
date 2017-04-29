@@ -22,3 +22,7 @@ sysinfo.txt
 
 # Other useless stuff
 Thumbs.db
+*.mp4
+*.mp4.meta
+*.mov
+*.mov.meta
