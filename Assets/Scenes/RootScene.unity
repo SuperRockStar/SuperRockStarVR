@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383969153ebaaae43be3180d0982a37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIP: http://192.168.10.210:8080/vods/
+  CurrentIP: http://demo.zoom-group.ru:8080/vods/
 --- !u!4 &639706258
 Transform:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class CameraEyeRaycastTarget : MonoBehaviour {
 
     public TargetPhase currentPhase { private set; get; }
 
+    private float delay = 1;
+
     [SerializeField]
     protected float m_LoadTime;
 
@@ -32,7 +34,7 @@ public class CameraEyeRaycastTarget : MonoBehaviour {
     protected virtual void Awake()
     {
         currentPhase = TargetPhase.Out;
-        m_CurrentTime = -2;
+        m_CurrentTime = -delay;
     }
 
     protected virtual void Update()
@@ -40,7 +42,7 @@ public class CameraEyeRaycastTarget : MonoBehaviour {
         switch(currentPhase)
         {
             case TargetPhase.Out:
-                m_CurrentTime = -2;
+                m_CurrentTime = -delay;
                 break;
             case TargetPhase.Over:
                 m_CurrentTime += Time.deltaTime;
